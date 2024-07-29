@@ -1,0 +1,368 @@
+<div class="dashboard">
+    <div class="top">
+        <h1 class="title">Monitoreo Global</h1>
+        <div class="right-section">
+            <i class="bi bi-globe2"></i>
+            <i class="bi bi-bell"></i>
+            <div class="settings-container">
+                <i class="bi bi-gear"></i>
+                <div class="mini-menu">
+                    <div class="menu-item" (click)="logout()">
+                        <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+                    </div>
+                </div>
+            </div>
+            <p>{{userNombre}} {{userApellido}}</p>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <span class="lecturas-ok">Lecturas Ok</span>
+            <span class="lecturas-count">{{lecturas}}</span>
+            <div class="icon-circle">
+                <i class="bi bi-check-lg"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <span class="lecturas-ok">Alertas medias</span>
+                <span class="lecturas-count">{{alertasMedias}}</span>
+                <div class="icon-circle-amarillo">
+                    <i class="bi bi-exclamation-lg"></i>
+                </div>
+              </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <span class="lecturas-ok">Alertas rojas</span>
+                <span class="lecturas-count">{{alertasRojas}}</span>
+                <div class="icon-circle-rojo">
+                    <i class="bi bi-exclamation-triangle"></i>                    
+                </div>
+              </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <span class="lecturas-ok">Sensores deshabilitados</span>
+                <span class="lecturas-count">{{sensoresDeshabilitados}}</span>
+                <div class="icon-circle-rojo2">                
+                    <i class="bi bi-x-circle"></i>
+                </div>
+              </div>
+        </div>
+      </div>
+      
+
+    <div class="block">
+        <div class="title-card-container">
+            <h1 class="table-title">Plantas</h1>
+            <div class="card-crear-tabla" (click)="openModal()"><i class="bi bi-plus-lg"></i>Crear Tabla</div>
+        </div>
+        <div class="table-scroll-container">
+        <table class="table table-white">
+            <thead>
+                <tr>
+                    <th>Nombre de la Planta</th>
+                    <th>País</th>
+                    <th>Lecturas</th>
+                    <th>Alertas Medias</th>
+                    <th>Alertas Rojas</th>
+                    <th>Sensores Deshabilitados</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let planta of plantas">
+                    <td>{{ planta.nombrePlanta }}</td>
+                    <td>
+                        <img [src]="planta.urlBandera" alt="{{ planta.pais }}" style="width: 24px; height: auto;"> 
+                        {{planta.pais }}
+                    </td>
+                    <td>{{ planta.lecturas }}</td>
+                    <td>{{ planta.alertasMedias }}</td>
+                    <td>{{ planta.alertasRojas }}</td>
+                    <td>{{ planta.sensoresDeshabilitados }}</td>
+                    <td class="icon-cell">
+                        <i class="bi bi-three-dots-vertical" (click)="openEditModal(planta)"></i>
+                      </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card2">
+            <div class="card2-content">
+                <span class="temperatura-text">Temperatura</span>
+                <div class="icon-circle2">
+                    <i class="bi bi-thermometer-half"></i>
+                </div>
+            </div>
+            <div class="card2-subcontent">
+                <div class="icon-circle-small">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span class="subcontent-text">100</span>
+                <div class="icon-circle-small-yellow">
+                    <i class="bi bi-exclamation"></i>
+                </div>
+                <span class="subcontent-text">20</span>
+                <div class="icon-circle-small-red">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <span class="subcontent-text">3</span>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card2-content">
+                <span class="temperatura-text">Presión</span>
+                <div class="icon-circle2">
+                    <i class="bi bi-speedometer2"></i>
+                </div>
+            </div>
+            <div class="card2-subcontent">
+                <div class="icon-circle-small">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span class="subcontent-text">100</span>
+                <div class="icon-circle-small-yellow">
+                    <i class="bi bi-exclamation"></i>
+                </div>
+                <span class="subcontent-text">20</span>
+                <div class="icon-circle-small-red">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <span class="subcontent-text">3</span>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card2-content">
+                <span class="temperatura-text">Viento</span>
+                <div class="icon-circle2">
+                    <i class="bi bi-wind"></i>
+                </div>
+            </div>
+            <div class="card2-subcontent">
+                <div class="icon-circle-small">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span class="subcontent-text">100</span>
+                <div class="icon-circle-small-yellow">
+                    <i class="bi bi-exclamation"></i>
+                </div>
+                <span class="subcontent-text">20</span>
+                <div class="icon-circle-small-red">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <span class="subcontent-text">3</span>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card2-content">
+                <span class="temperatura-text">Niveles</span>
+                <div class="icon-circle2">
+                    <i class="bi bi-water"></i>
+                </div>
+            </div>
+            <div class="card2-subcontent">
+                <div class="icon-circle-small">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span class="subcontent-text">100</span>
+                <div class="icon-circle-small-yellow">
+                    <i class="bi bi-exclamation"></i>
+                </div>
+                <span class="subcontent-text">20</span>
+                <div class="icon-circle-small-red">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <span class="subcontent-text">3</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container2">
+        <div class="card2">
+            <div class="card2-content">
+                <span class="temperatura-text">Energía</span>
+                <div class="icon-circle2">
+                    <i class="bi bi-clipboard2-pulse"></i>
+                </div>
+            </div>
+            <div class="card2-subcontent">
+                <div class="icon-circle-small">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span class="subcontent-text">100</span>
+                <div class="icon-circle-small-yellow">
+                    <i class="bi bi-exclamation"></i>
+                </div>
+                <span class="subcontent-text">20</span>
+                <div class="icon-circle-small-red">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <span class="subcontent-text">3</span>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card2-content">
+                <span class="temperatura-text">Tensión</span>
+                <div class="icon-circle2">
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+            </div>
+            <div class="card2-subcontent">
+                <div class="icon-circle-small">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span class="subcontent-text">100</span>
+                <div class="icon-circle-small-yellow">
+                    <i class="bi bi-exclamation"></i>
+                </div>
+                <span class="subcontent-text">20</span>
+                <div class="icon-circle-small-red">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <span class="subcontent-text">3</span>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card2-content">
+                <span class="temperatura-text">Monóxido de Carbono</span>
+                <div class="icon-circle2">
+                    <i class="bi bi-cloud-haze2"></i>
+                </div>
+            </div>
+            <div class="card2-subcontent">
+                <div class="icon-circle-small">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span class="subcontent-text">100</span>
+                <div class="icon-circle-small-yellow">
+                    <i class="bi bi-exclamation"></i>
+                </div>
+                <span class="subcontent-text">20</span>
+                <div class="icon-circle-small-red">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <span class="subcontent-text">3</span>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card2-content">
+                <span class="temperatura-text">Otros Gases</span>
+                <div class="icon-circle2">
+                    <i class="bi bi-cloudy"></i>
+                </div>
+            </div>
+            <div class="card2-subcontent">
+                <div class="icon-circle-small">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span class="subcontent-text">100</span>
+                <div class="icon-circle-small-yellow">
+                    <i class="bi bi-exclamation"></i>
+                </div>
+                <span class="subcontent-text">20</span>
+                <div class="icon-circle-small-red">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <span class="subcontent-text">3</span>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <h2 class="modal-title">Crear nueva planta</h2>
+    <div class="modal-input-container">
+      <label class="modal-label" for="nombrePlanta">Nombre Planta</label>
+      <input id="nombrePlanta" type="text" class="modal-input" placeholder="Nombre Planta"
+      [(ngModel)]="planta.nombrePlanta" name="nombrePlanta" required (ngModelChange)="validateForm()">
+    </div>
+    
+    <div class="modal-input-container">
+      <label class="modal-label" for="pais">País</label>
+      <select
+      id="pais"
+      class="modal-input"
+      [(ngModel)]="planta.pais"
+      name="pais"
+      required
+      (ngModelChange)="validateForm()"
+    >
+      <option value="" disabled selected>Seleccione un país</option>
+      <option *ngFor="let pais of paises" [value]="pais.nombre">{{ pais.nombre }}</option>
+    </select>
+    </div>
+    <div class="modal-buttons">
+      <button class="modal-button cancel-button" (click)="closeModal()">Cancelar</button>
+      <button class="modal-button create-button" [disabled]="!isFormValid" (click)="crearPlanta()">Crear</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal" *ngIf="showEditModal">
+    <div class="modal-content modal-edit-content">
+      <h2 class="modal-title">Editar planta</h2>
+      
+      <div class="modal-input-container">
+        <div class="modal-input-row">
+          <div class="modal-input-group">
+            <label class="modal-label" for="editNombrePlanta">Nombre Planta</label>
+            <input id="editNombrePlanta" type="text" class="modal-input" [(ngModel)]="selectedPlanta.nombrePlanta" name="editNombrePlanta" placeholder="Nombre Planta">
+          </div>
+          <div class="modal-input-group">
+            <label class="modal-label" for="editPais">País</label>
+            <select id="editPais" class="modal-input" [(ngModel)]="selectedPlanta.pais" name="editPais" required>
+              <option value="" disabled selected>Seleccione un país</option>
+              <option *ngFor="let pais of paises" [value]="pais.nombre">{{ pais.nombre }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-input-container">
+        <div class="modal-input-row">
+          <div class="modal-input-group">
+            <label class="modal-label" for="editLecturas">Lecturas</label>
+            <input id="editLecturas" type="number" class="modal-input" [(ngModel)]="selectedPlanta.lecturas" name="editLecturas" placeholder="Lecturas">
+          </div>
+          <div class="modal-input-group">
+            <label class="modal-label" for="editAlertasMedias">Alertas Medias</label>
+            <input id="editAlertasMedias" type="number" class="modal-input" [(ngModel)]="selectedPlanta.alertasMedias" name="editAlertasMedias" placeholder="Alertas Medias">
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-input-container">
+        <div class="modal-input-row">
+          <div class="modal-input-group">
+            <label class="modal-label" for="editAlertasRojas">Alertas Rojas</label>
+            <input id="editAlertasRojas" type="number" class="modal-input" [(ngModel)]="selectedPlanta.alertasRojas" name="editAlertasRojas" placeholder="Alertas Rojas">
+          </div>
+          <div class="modal-input-group">
+            <label class="modal-label" for="editSensoresDeshabilitados">Sensores</label>
+            <input id="editSensoresDeshabilitados" type="number" class="modal-input" [(ngModel)]="selectedPlanta.sensoresDeshabilitados" name="editSensoresDeshabilitados" placeholder="Sensores Deshabilitados">
+          </div>
+        </div>
+      </div>
+  
+      <div class="modal-buttons">
+        <button class="modal-button cancel-button" (click)="closeEditModal()">Cancelar</button>
+        <button class="modal-button create-button" (click)="editarPlanta()">Guardar</button>
+      </div>
+    </div>
+  </div>
+  

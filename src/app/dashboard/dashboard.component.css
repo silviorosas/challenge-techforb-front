@@ -1,0 +1,731 @@
+
+.dashboard {
+    background-color: #e9f1f4; 
+    color: #333;
+    min-height: 100vh; 
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top {
+    width: 100%;
+    max-width: 1262px; 
+    height: 45px;
+    margin: 50px auto 0; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; 
+  }
+  
+  .title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: left;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+  }
+  
+  .right-section i {
+    font-size: 24px; 
+  }
+  
+  .right-section p {
+    font-size: 16px; 
+    font-weight: 900;
+    margin-top: 26px;
+  }
+
+
+
+  .card-container {
+    width: 1262px; 
+    height: 110px; 
+    display: flex;
+    justify-content: space-between; 
+    margin: 20px auto; 
+  }
+  
+.card {
+    width: 290px;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    opacity: 1; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+
+
+.card-content {
+  position: relative; /* Importante para posicionar los elementos */
+}
+
+.lecturas-ok {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #838B9E; /* Ajusta el color según sea necesario */
+  position: absolute;
+  top: 31px;
+  left: 18px;
+}
+
+.lecturas-count {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #22242C;
+  position: absolute;
+  top: 49px; /* Coloca este texto debajo del anterior */
+  left: 18px;
+}
+
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #EBF8F9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  left: 210px; /* Ajusta la posición según sea necesario */
+}
+
+.icon-circle i {
+  color: #33A3AA; 
+  font-size: 24px;
+}
+
+
+.icon-circle-amarillo {
+  width: 60px;
+  height: 60px;
+  background-color: #f3dda5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  left: 210px; /* Ajusta la posición según sea necesario */
+}
+
+.icon-circle-amarillo i {
+  color: #efb625;/* Ajusta el color del ícono según sea necesario */
+  font-size: 24px; /* Ajusta el tamaño del ícono según sea necesario */
+}
+
+
+.icon-circle-rojo {
+  width: 60px;
+  height: 60px;
+  background-color: #f5b1a2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  left: 210px; /* Ajusta la posición según sea necesario */
+}
+
+.icon-circle-rojo i {
+  color: #ed6141;/* Ajusta el color del ícono según sea necesario */
+  font-size: 26px; /* Ajusta el tamaño del ícono según sea necesario */
+  margin-bottom: 10px;
+}
+
+
+.icon-circle-rojo2 {
+  width: 60px;
+  height: 60px;
+  background-color: #f8c8bc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  left: 210px; /* Ajusta la posición según sea necesario */
+}
+
+.icon-circle-rojo2 i {
+  color: #F69681;/* Ajusta el color del ícono según sea necesario */
+  font-size: 26px; /* Ajusta el tamaño del ícono según sea necesario */
+  margin-bottom: 4px;
+}
+
+.card-container2 { 
+  width: 1262px; 
+  height: 110px; 
+  display: flex;
+  justify-content: space-between; 
+  margin: 20px auto; 
+  margin-top: -8px;
+}
+
+ 
+.card2 {
+  width: 290px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  opacity: 1; 
+  border-radius: 6px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  position: relative;
+}
+
+
+.card2-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60%;
+  padding: 0px 10px; /* Ajusta el padding según sea necesario */
+}
+
+.temperatura-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #8E8EA1;
+  margin-left: 8px;
+}
+
+.icon-circle2 {
+  width: 60px;
+  height: 60px;
+  background-color: #EFF2F7;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.icon-circle2 i {
+  font-size: 24px; /* Ajusta el tamaño del ícono según sea necesario */
+  color: #313030; /* Ajusta el color del ícono según sea necesario */
+}
+
+
+.card2-subcontent {
+  display: flex;  
+  align-items: center;
+  padding: 0 20px; /* Ajusta el padding según sea necesario */
+  margin-top: -18px;
+  height: 50%;
+  gap: 10px; /* Espacio entre cada par de icono y texto */
+}
+
+.icon-circle-small {
+  width: 14px;
+  height: 14px;
+  background-color: #DEE8DB;
+  color: #539B5B;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+ 
+}
+
+.icon-circle-small-yellow {
+  width: 14px;
+  height: 14px;
+  background-color: #f6e6be;
+  color: #fbbf29;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.icon-circle-small-red {
+  width: 6px;
+  height: 6px;
+  background-color: #FFF3F1;
+  color: #dc472d;;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.subcontent-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #8E8EA1;
+  margin-right: 10px;
+}
+
+
+/*bloque contenedor de tabla*/
+.block {
+  width: 1262px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  opacity: 1; 
+  margin: 30px auto 0; 
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+  .table-scroll-container {
+    flex: 1;
+    overflow-y: auto; /* AGREGA UNA BARRA DE DESPLAZAMIENTO VERTICAL */
+  }
+
+
+
+
+  .table-title {
+    width: 62px;
+    height: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 20px; 
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+
+  /*centrar icono acciones*/
+  .icon-cell {
+    display: table-cell;
+    text-align: center; 
+    vertical-align: middle; 
+    padding:0px;   
+    width: 1%; 
+    cursor: pointer;
+  }
+
+
+.table th {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #B0CAD1;  
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  padding: 8px; /* Añade un poco de padding para espaciar el texto del borde */
+}
+
+
+.title-card-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Añade un poco de espacio entre el título y la tabla */
+}
+
+.table-title {
+  margin-right: 20px; /* Añade un poco de espacio entre el título y la tarjeta */
+}
+.card-crear-tabla {
+  width: 170px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 0 0 0;
+  border: 1px solid #B0CAD1;
+  opacity: 1; 
+  background-color: #fff; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-top: 14px;
+  cursor: pointer; /* Cambia el cursor a dedo */
+  transition: background-color 0.3s; /* Añade una transición suave para el cambio de color */
+}
+
+.card-crear-tabla:hover {
+  background-color: #B0CAD1; /* Cambia el color de fondo al pasar el cursor */
+  color: #fff; /* Cambia el color del texto al pasar el cursor */
+}
+
+
+/*modal crear*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 380px;
+  height: 290px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.modal-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.modal-input {
+  width: 320px;
+  height: 42px;
+  top: 392px;
+  left: 560px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #838B9E;  
+  border: 2px solid #C6C9D2; 
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 5px;
+}
+.modal-input::placeholder {
+  color: #838B9E; /* Cambia el color del placeholder al mismo color que el del select */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
+  margin-top: 2px; /* Espacio entre los botones y los inputs/selects */
+}
+
+.modal-button {
+  width: 100px;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid #33A3AA;
+  background-color: #33A3AA;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-button:hover {
+  background-color: #287a7f;
+}
+
+.cancel-button {
+  background-color: transparent; /* Fondo transparente */
+  color: #33A3AA; /* Color del texto */
+  border: 1px solid #33A3AA; /* Borde del mismo color que el botón "Crear" */
+}
+
+.cancel-button:hover {
+  background-color: rgba(51, 163, 170, 0.1); /* Fondo ligeramente coloreado al pasar el cursor */
+  color: #33A3AA; /* Mantener el color del texto */
+}
+
+.create-button {
+  background-color: #33A3AA;
+  border: 1px solid #33A3AA;
+}
+
+.create-button:hover {
+  background-color: #287a7f;
+}
+
+.modal-label {
+  width: 108px;
+  height: 21px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: #838B9E; /* Color de la etiqueta */
+  margin-bottom: 2px; /* Espacio entre la etiqueta y el input/select */
+}
+
+.modal-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -2px; /* Espacio entre los inputs/selects */
+}
+
+
+/*para editar*/
+
+/* Estilos específicos para el modal de edición */
+.modal-edit-content {
+  width: 720px;
+  height: 390px;
+}
+
+.modal-input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.modal-input:last-child {
+  margin-right: 0;
+}
+
+/*mini menu cerrar sesion*/
+/* Estilo para el contenedor de configuración */
+.settings-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo para el mini menú */
+.mini-menu {
+  display: none; /* Ocultar por defecto */
+  position: absolute;
+  top: 100%; /* Mostrar justo debajo del icono */
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Mostrar el mini menú al pasar el cursor sobre el contenedor */
+.settings-container:hover .mini-menu {
+  display: block;
+}
+
+/* Estilo para los elementos del menú */
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.menu-item i {
+  margin-right: 5px;
+}
+
+/* Opcional: Cambiar el color de fondo al pasar el cursor sobre el elemento del menú */
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+/* Media Queries for Mobile Devices */
+
+@media (max-width: 768px) {
+
+  /* Ensure the dashboard takes up full width */
+  .dashboard {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Adjust top section layout */
+  .top {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .title {
+    font-size: 24px; /* Adjust font size for mobile */
+    line-height: 32px;
+  }
+
+  .right-section {
+    margin-top: 10px;
+  }
+
+  /* Adjust card container for mobile */
+  .card-container, .card-container2 {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: stretch;
+    width: 100%;
+    max-width: none;
+    height: auto; /* Allow height to adjust automatically */
+    margin: 10px 0;
+  }
+
+  /* Card styles */
+  .card, .card2 {
+    width: 100%; 
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+  }
+
+ 
+  .card-content, .card2-content {
+    position: relative;
+  }
+
+  .icon-circle, .icon-circle-amarillo, .icon-circle-rojo, .icon-circle-rojo2, .icon-circle2 {
+    position: static; 
+    margin: 0 auto; 
+  }
+
+  .icon-circle i, .icon-circle-amarillo i, .icon-circle-rojo i, .icon-circle-rojo2 i, .icon-circle2 i {
+    font-size: 20px; 
+  }
+
+  .lecturas-ok, .lecturas-count {
+    position: static; 
+    margin-left: 0; 
+  }
+
+  /* Table*/
+  .block {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+
+  .table-scroll-container {
+    overflow-x: auto; 
+  }
+
+  .table-title {
+    font-size: 14px; 
+    margin-bottom: 10px; 
+  }
+
+  .table {
+    width: 100%; 
+    font-size: 12px; 
+  }
+
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  /* Modal de edición */
+  .modal-edit-content {
+    max-height: 90vh; /* Ajusta la altura máxima del modal para que ocupe más espacio en la pantalla */
+    height: 90vh; /* Asegura que el modal ocupe más altura en la pantalla */
+    overflow-y: auto; /* Agrega scroll vertical solo si el contenido excede la altura del modal */
+    padding: 15px; /* Espacio reducido alrededor del contenido */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-input-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+  }
+
+  .modal-input-group {
+    flex: 1;
+    margin-right: 5px; /* Espacio reducido entre los grupos de entrada */
+  }
+
+  .modal-input-group:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último grupo */
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-direction: column; /* Acomoda los botones verticalmente */
+    margin-top: 10px; /* Espacio superior reducido para los botones */
+  }
+
+  .modal-button {
+    width: calc(100% - 10px); /* Asegura que los botones sean un poco más angostos que los inputs */
+    margin-bottom: 5px; /* Espacio reducido entre los botones */
+  }
+
+  /* Modal de creación */
+  .modal-content {
+    max-height: 90vh; /* Ajusta la altura máxima del modal para que ocupe más espacio en la pantalla */
+    height: 60vh; /* Asegura que el modal ocupe más altura en la pantalla */
+    overflow-y: auto; /* Agrega scroll vertical solo si el contenido excede la altura del modal */
+    padding: 15px; /* Espacio reducido alrededor del contenido */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-input-container {
+    margin-bottom: 10px; /* Espacio reducido entre los campos de entrada */
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-direction: column; /* Acomoda los botones verticalmente */
+    margin-top: 10px; /* Espacio superior reducido para los botones */
+  }
+
+  .modal-button {
+    width: calc(100% - 10px); /* Asegura que los botones sean un poco más angostos que los inputs */
+    margin-bottom: 5px; /* Espacio reducido entre los botones */
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .card-crear-tabla {
+    margin-top: 40px; /* Espacio superior para separar el botón de la tabla */
+    margin-bottom: 10px; /* Espacio inferior para el botón */
+    padding: 10px; /* Espacio interior del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido del botón */
+    background-color: #dce7f3; /* Fondo azul para el botón */
+    color: rgb(36, 35, 35); /* Color del texto del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+    text-align: center; /* Alinea el texto en el centro */
+  }
+
+  .card-crear-tabla i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<div class="login-container">
+    <div class="left-side">
+      <div class="content">
+        <div class="login-title">Inicio Sesión</div>
+        <div class="login-subtitle">
+          Nos alegra tenerte de vuelta y estamos listos para atender tus necesidades. Inicia sesión y continúa aprovechando al máximo nuestra plataforma.
+        </div>
+        <div class="monitoring-container">
+          <div class="monitoring-title">Monitoreo integral</div>
+          <div class="monitoring-subtitle">Administra, monitoria múltiples plantas de forma centralizada</div>
+        </div>
+        <div class="monitoring-container">
+          <div class="monitoring-title">Notificaciones en tiempo real</div>
+          <div class="monitoring-subtitle">Recibí notificaciones en tiempo real sobre las mediciones</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="portal-title">Portal de monitoreo</div>
+      <div class="signin-title">Iniciar sesión</div>
+      <form (ngSubmit)="onLogin()">
+      <label for="email" class="email-label">Email address</label>
+      <input type="email" id="email" class="email-input" placeholder="Email address" [(ngModel)]="loginDto.email" name="email" >
+      <div class="password-container">
+        <input type="password" id="password" class="password-input" placeholder="Contraseña"[(ngModel)]="loginDto.password" name="password">
+        <i class="bi bi-eye-fill eye-icon"></i>
+      </div>
+      <div class="forgot-password-container">
+        <div class="forgot-password">¿Olvidaste tu contraseña?</div>
+        <button class="signin-button">Iniciar sesión</button>
+      </div>
+      </form>
+    </div>
+  </div>
+  
