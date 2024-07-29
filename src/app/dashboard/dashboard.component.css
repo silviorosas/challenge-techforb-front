@@ -566,16 +566,16 @@
     padding: 0;
   }
 
-  /* Adjust top section layout */
+ 
   .top {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: column; 
+    align-items: flex-start; 
     height: auto;
     margin: 20px 0;
   }
 
   .title {
-    font-size: 24px; /* Adjust font size for mobile */
+    font-size: 24px; 
     line-height: 32px;
   }
 
@@ -583,13 +583,13 @@
     margin-top: 10px;
   }
 
-  /* Adjust card container for mobile */
+
   .card-container, .card-container2 {
-    flex-direction: column; /* Stack cards vertically */
+    flex-direction: column; 
     align-items: stretch;
     width: 100%;
     max-width: none;
-    height: auto; /* Allow height to adjust automatically */
+    height: auto; 
     margin: 10px 0;
   }
 
@@ -644,9 +644,9 @@
 @media (max-width: 767px) {
   /* Modal de edición */
   .modal-edit-content {
-    max-height: 90vh; /* Ajusta la altura máxima del modal para que ocupe más espacio en la pantalla */
-    height: 90vh; /* Asegura que el modal ocupe más altura en la pantalla */
-    overflow-y: auto; /* Agrega scroll vertical solo si el contenido excede la altura del modal */
+    max-height: 90vh; 
+    height: 90vh;
+    overflow-y: auto; 
     padding: 15px; /* Espacio reducido alrededor del contenido */
     display: flex;
     flex-direction: column;
@@ -654,7 +654,7 @@
 
   .modal-input-row {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+    flex-wrap: wrap; 
   }
 
   .modal-input-group {

@@ -55,19 +55,16 @@ export class DashboardComponent {
 
   logout(): void {
     this.authService.logout();
-    this.router.navigate(['/login']); // Ajusta la ruta de navegación según tu aplicación
+    this.router.navigate(['/login']); 
   }
 
   getIdNombreApellidoByToken(): void {
     const token = this.authService.getToken();
     if (token) {
       const decodedToken: any = jwtDecode(token);
-      this.userId = decodedToken.userId;
-      console.log("userId:", this.userId);
-      this.userNombre = decodedToken.userNombre;
-      console.log("userNombre:", this.userNombre);
-      this.userApellido = decodedToken.userApellido;
-      console.log("userApellido:", this.userApellido);
+      this.userId = decodedToken.userId;     
+      this.userNombre = decodedToken.userNombre;    
+      this.userApellido = decodedToken.userApellido;      
     }
   }
 
