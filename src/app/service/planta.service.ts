@@ -9,7 +9,8 @@ import { PlantaDTO } from '../model/plantaDto';
 })
 export class PlantaService {
 
-  private apiUrl = 'http://localhost:8080/api/plantas'; // Cambia esta URL según tu configuración
+  //private apiUrl = 'http://localhost:8080/api/plantas'; 
+  private apiUrl = 'https://challenge-techforb-backend.onrender.com/api/plantas'; 
 
   constructor(private http: HttpClient) {}
 

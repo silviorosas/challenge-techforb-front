@@ -19,22 +19,25 @@
       <div class="portal-title">Portal de monitoreo</div>
       <div class="signin-title">Iniciar sesión</div>
       <form (ngSubmit)="onLogin()">
-        <label for="email" class="email-label">Email address</label>
-        <input type="email" id="email" class="email-input" placeholder="Email address" [(ngModel)]="loginDto.email" name="email">
-        <div class="password-container">
-          <input type="password" id="password" class="password-input" placeholder="Contraseña" [(ngModel)]="loginDto.password" name="password">
-         
-        </div>
-        <div class="forgot-password-container">
-          <div class="forgot-password">¿Olvidaste tu contraseña?</div>
-          <button class="signin-button">Iniciar sesión</button>
-        </div>
-        <div class="register-container">
-          <span>Si no tienes cuenta, </span>
-          <a  class="register-link"  (click)="openRegisterModal()">regístrate</a>
-        </div>
+          <div class="input-container">
+              <label for="email" class="email-label">Email address</label>
+              <input type="email" id="email" class="email-input" placeholder="Email address" [(ngModel)]="loginDto.email" name="email">
+          </div>
+          <div class="password-container input-container">
+              <label for="password" class="password-label">Contraseña</label>
+              <input type="password" id="password" class="password-input" placeholder="Contraseña" [(ngModel)]="loginDto.password" name="password">
+          </div>
+          <div class="forgot-password-container">
+              <div class="forgot-password">¿Olvidaste tu contraseña?</div>
+              <button class="signin-button">Iniciar sesión</button>
+          </div>
+          <div class="register-container">
+              <span>Si no tienes cuenta, </span>
+              <a class="register-link" (click)="openRegisterModal()">regístrate</a>
+          </div>
       </form>
-    </div>
+  </div>
+  
 
     <!--Modal-->
     <div class="modal" *ngIf="showRegisterModal">

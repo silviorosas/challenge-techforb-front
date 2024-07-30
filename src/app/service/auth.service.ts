@@ -28,7 +28,8 @@ export interface UserResponse {
 })
 export class AuthService {
 
-  private url = 'http://localhost:8080/api/auth';
+  //private url = 'http://localhost:8080/api/auth';
+  private url = 'https://challenge-techforb-backend.onrender.com/api/auth';
  
   constructor(private http: HttpClient) { }
 
@@ -43,6 +44,7 @@ export class AuthService {
       map(response => {
         if (response && response.responseMessage) {
           localStorage.setItem('authToken', response.responseMessage);
+         // console.log("token",response.responseMessage)
         }
         return response;
       })

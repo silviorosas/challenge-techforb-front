@@ -44,13 +44,8 @@ export class DashboardComponent {
               private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
-    this.getAllPlantas();
-    this.getAllPaises();
-    this.getAllLecturas();
-    this.getAllAlertMed();
-    this.getAllAlertasRojas();
-    this.getAllSensoresDeshabilitados();
-    this.getIdNombreApellidoByToken();
+    this.updateDashboardData();   
+    this.getAllPaises();   
   }
 
   logout(): void {
@@ -66,6 +61,15 @@ export class DashboardComponent {
       this.userNombre = decodedToken.userNombre;    
       this.userApellido = decodedToken.userApellido;      
     }
+  }
+
+  updateDashboardData(): void {
+    this.getAllPlantas();
+    this.getAllLecturas();
+    this.getAllAlertMed();
+    this.getAllAlertasRojas();
+    this.getAllSensoresDeshabilitados();
+    this.getIdNombreApellidoByToken();
   }
 
   getAllPlantas(){
@@ -157,14 +161,11 @@ showModal = false;
   crearPlanta() {
     // Almacenar el país seleccionado antes de enviar la solicitud
     this.selectedCountry = this.planta.pais;
-
     if (this.planta.pais) {
       this.planta.pais = this.planta.pais.toUpperCase();
     }
-
-    this.plantaService.crearPlanta(this.planta).subscribe(response => {
-      // Actualizar la lista de plantas y mostrar mensaje de éxito
-      this.getAllPlantas();
+    this.plantaService.crearPlanta(this.planta).subscribe(response => {   
+      this.updateDashboardData();
       this.toastr.success('Planta creada con éxito!!', 'Éxito', {
         positionClass: 'toast-top-center',
       });
@@ -188,7 +189,6 @@ showModal = false;
   //PARA EDITAR PLANTA
 
   showEditModal: boolean = false;
-
   pais: string = '';
   lecturas: number = 0;
   alertasMedias: number = 0;
@@ -214,7 +214,7 @@ showModal = false;
         this.toastr.success('Planta actualizada con éxito!!', 'Éxito', {
           positionClass: 'toast-top-center',
         });        
-        this.getAllPlantas(); 
+        this.updateDashboardData();
         this.closeEditModal();       
       },
       (error) => {       

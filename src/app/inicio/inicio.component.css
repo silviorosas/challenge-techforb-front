@@ -86,38 +86,37 @@
     margin-bottom: 20px;
   }
   
-  .email-label {
+  .email-label, .password-label {
+    display: block;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 17px;
     color: #000000;
     margin-bottom: 5px;
-  }
-  
-  .email-input, .password-input {
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.email-input, .password-input {
     width: 393px;
     height: 48px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
+
   
   .password-container {
     position: relative;
     width: 393px;
   }
   
-  .eye-icon {
-    position: absolute;
-    top: 36%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
+  
   
   .forgot-password-container {
     display: flex;
@@ -254,4 +253,151 @@
 .create-button {
   background-color: #007bff;
   color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .content, .right-side {
+    width: 100%;
+  }
+
+  .login-title {
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 15px;
+  }
+
+  .login-subtitle, .monitoring-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .monitoring-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .portal-title {
+    width: auto;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 15px;
+  }
+
+  .signin-title {
+    width: auto;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .email-input, .password-input, .forgot-password-container {
+    width: 100%;
+  }
+
+  .signin-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .forgot-password-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .forgot-password {
+    margin-bottom: 10px;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .portal-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .signin-title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .email-input, .password-input {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .signin-button {
+    font-size: 12px;
+  }
+
+  .forgot-password {
+    font-size: 12px;
+  }
+
+  .register-container {
+    font-size: 12px;
+  }
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    max-width: none;
+    padding: 10px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .modal-input-container {
+    margin-bottom: 15px;
+  }
+
+  .modal-input-row {
+    flex-direction: column;
+  }
+
+  .modal-input-group {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .cancel-button {
+    margin-bottom: 10px;
+  }
 }
